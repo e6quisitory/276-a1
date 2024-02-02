@@ -1,0 +1,138 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  color: #E0E0E0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #333;
+  background-color: #1E1E1E;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  max-height: 90vh;
+  overflow: auto;
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+  color: #00FFC6;
+}
+
+#question-container {
+  text-align: left;
+  margin-top: 20px;
+}
+
+#question {
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #00FFC6;
+}
+
+.btn-grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+button {
+  padding: 10px;
+  font-family: inherit;
+  font-size: 16px;
+  color: #000;
+  background-color: #39FF14;
+  border: none;
+  border-radius: 0;
+  box-shadow: 0 0 5px rgba(0, 255, 255, 0.7), 0 0 15px rgba(0, 255, 255, 0.5), 0 0 30px rgba(0, 255, 255, 0.3);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover, button.selected-answer {
+  background-color: #ffd900;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.9), 0 0 20px rgba(0, 255, 255, 0.7), 0 0 40px rgba(0, 255, 255, 0.5);
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+#results {
+  padding: 10px;
+  border-top: 1px solid #333;
+  margin-top: 30px;
+  background-color: #222;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.hidden {
+  display: none;
+}
+
+.correct {
+  color: #4CAF50;
+}
+
+.wrong {
+  color: #F44336;
+}
+
+#correct-answers ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#correct-answers li {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+#correct-answers li.correct {
+  color: #4CAF50;
+}
+
+#correct-answers li.incorrect {
+  color: #F44336;
+}
+
+#results-title {
+  font-style: italic;
+  text-align: center;
+  color: #E0E0E0;
+  display: none;
+}
+
+#background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#celebratory-image {
+  width: 20%;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.image-visible {
+  opacity: 1 !important;
+}
